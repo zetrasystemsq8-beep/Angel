@@ -107,9 +107,17 @@ dialog{margin:auto;border:0;background:transparent;max-width:92vw;max-height:90v
 dialog::backdrop{background:#0009;backdrop-filter:blur(6px)}
 dialog img{max-height:84vh;border-radius:28px;border:2px solid var(--gold)}
 dialog button{position:absolute;top:10px;right:10px;width:42px;height:42px;border-radius:50%;border:0;background:var(--gold);font-size:1.1rem;cursor:pointer}
-.card img{cursor:zoom-in}.card img[src*=wine]{cursor:default}
+.card img{cursor:zoom-in}.card img[src*=wine],.gal img[src*=wine]{cursor:default}
 .zt{display:inline-flex;align-items:center;gap:.6em;padding:.75em 1.5em;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(135deg,#f3cf8a22,#ff4f9a22);margin-top:12px;font-weight:600;color:var(--gold);letter-spacing:.03em}
 .dpic img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 30px 30px;border:1.5px solid #f3cf8a88;box-shadow:0 24px 60px #0008}
+.mix{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:30px}
+.mix a{display:block;text-align:center;text-decoration:none;font:500 1.1rem "Bodoni Moda",serif;color:var(--gold);transition:transform .25s}
+.mix a:hover{transform:translateY(-6px) rotate(-1.5deg)}
+.mix img{width:100%;border-radius:36px;border:1px solid #f3cf8a55;margin-bottom:8px;box-shadow:0 14px 36px #0007}
+.gal{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);grid-auto-rows:170px;margin-top:30px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:26px;border:1px solid #f3cf8a44;cursor:zoom-in}
+.gal .t{grid-row:span 2}.gal .w{grid-column:span 2}
+@media(min-width:821px){.gal{grid-template-columns:repeat(4,1fr);grid-auto-rows:230px}}
 footer .cols{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));text-align:left;margin-bottom:30px}
 footer h4{font:500 1.15rem "Bodoni Moda",serif;color:var(--gold);margin-bottom:8px}
 footer li{list-style:none}footer ul a{text-decoration:none;font-weight:300}
@@ -155,6 +163,26 @@ footer li{list-style:none}footer ul a{text-decoration:none;font-weight:300}
 <div class="pill"><span>Stage backdrops</span><span>Hanging florals</span><span>Lighting</span><span>Seating</span></div>
 <p style="margin-top:1.6rem"><a class="btn" href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20a%20quote%20for%20event%20decor%20and%20styling." target="_blank" rel="noopener">Book event decor</a></p></div>
 </div></section>
+
+<section id="mix"><div class="wrap"><h2>Everything for the day, in one order</h2>
+<p class="lead">Cake, gele, fans, veils and decor can all be ordered together. Tap what you need and tell us the rest on WhatsApp.</p>
+<div class="mix">
+<a href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20to%20order%20a%20custom%20cake." target="_blank" rel="noopener"><img src="images/art-cake.svg" width="200" height="200" alt="Cake illustration">Cakes</a>
+<a href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20to%20order%20an%20auto%20gele." target="_blank" rel="noopener"><img src="images/art-gele.svg" width="200" height="200" alt="Gele illustration">Gele</a>
+<a href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20to%20order%20personalised%20hand%20fans." target="_blank" rel="noopener"><img src="images/art-fan.svg" width="200" height="200" alt="Hand fan illustration">Hand fans</a>
+<a href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20to%20order%20a%20bridal%20veil." target="_blank" rel="noopener"><img src="images/art-veil.svg" width="200" height="200" alt="Veil illustration">Veils</a>
+<a href="https://wa.me/2349138079985?text=Hello%2C%20I%20want%20a%20quote%20for%20event%20decor." target="_blank" rel="noopener"><img src="images/art-decor.svg" width="200" height="200" alt="Event decor illustration">Decor</a>
+</div></div></section>
+
+<section id="gallery"><div class="wrap"><h2>A peek at our work</h2>
+<div class="gal">
+<img class="t" loading="lazy" src="images/angel-event-decor.jpg" width="810" height="1080" alt="Event stage decor with hanging florals and coloured lighting">
+<img loading="lazy" src="images/angel-cake-birthday-cake.jpg" width="720" height="950" alt="Two-tier white birthday cake with gold detail">
+<img loading="lazy" src="images/angel-cake-auto-gele-blue.jpg" width="735" height="1009" alt="Blue auto gele with matching jewellery">
+<img class="w" loading="lazy" src="images/angel-cake-bridal-veil.jpg" width="720" height="697" alt="Lace-trim bridal veil">
+<img loading="lazy" src="images/angel-cake-hand-fan.jpg" width="577" height="721" alt="Personalised pink bridal hand fan">
+<img loading="lazy" src="images/angel-cake-auto-gele-wine.jpg" width="571" height="1280" alt="Wine statement gele with bow design">
+</div></div></section>
 
 <section id="bundles"><div class="wrap"><h2>Mix and match for one combined quote</h2>
 <p class="lead">Planning a full event? Ask for several pieces together and get one clear quote.</p>
@@ -209,7 +237,7 @@ footer li{list-style:none}footer ul a{text-decoration:none;font-weight:300}
 <footer><div class="wrap">
 <div class="cols">
 <div><h4>Angel Cake &amp; Bridal Events</h4><p>Cakes, gele, hand fans and bridal veils in Akungba Akoko, Ondo State.</p></div>
-<div><h4>Explore</h4><ul><li><a href="#collections">Collections</a></li><li><a href="#bundles">Bundles</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Order</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="#collections">Collections</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#bundles">Bundles</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Order</a></li></ul></div>
 <div><h4>Contact</h4><ul><li><a href="tel:+2349138079985">09138079985</a></li><li><a href="https://wa.me/2349138079985" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://www.tiktok.com/search?q=angel%20beauty%20453" target="_blank" rel="noopener">TikTok: angel beauty 453</a></li></ul></div>
 </div>
 <p>© <span id="y">2026</span> Angel Cake &amp; Bridal Events. All rights reserved.</p>
@@ -231,7 +259,7 @@ window.open("https://wa.me/2349138079985?text="+encodeURIComponent(t),"_blank")}
 var bar=document.getElementById("bar");
 addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%"},{passive:true});
 var lb=document.getElementById("lb"),li=lb.querySelector("img");
-document.querySelectorAll(".card img").forEach(function(i){i.addEventListener("click",function(){if(i.src.indexOf("wine")>-1)return;li.src=i.src;li.alt=i.alt;lb.showModal()})});
+document.querySelectorAll(".card img,.gal img").forEach(function(i){i.addEventListener("click",function(){if(i.src.indexOf("wine")>-1)return;li.src=i.src;li.alt=i.alt;lb.showModal()})});
 lb.addEventListener("click",function(){lb.close()});
 </script>
 </body>
